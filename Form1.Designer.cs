@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelAi = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.LabelAi = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.labelB = new System.Windows.Forms.Label();
+            this.LabelB = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,21 +46,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.RadioExFirst = new System.Windows.Forms.RadioButton();
+            this.RadioExSecond = new System.Windows.Forms.RadioButton();
+            this.BtnSolution = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelAi
+            // LabelAi
             // 
-            this.labelAi.AutoSize = true;
-            this.labelAi.Location = new System.Drawing.Point(12, 13);
-            this.labelAi.Name = "labelAi";
-            this.labelAi.Size = new System.Drawing.Size(510, 17);
-            this.labelAi.TabIndex = 0;
-            this.labelAi.Text = "Задана схема. Пусть Ai - событие при котором за время T выйдет из строя.";
+            this.LabelAi.AutoSize = true;
+            this.LabelAi.Location = new System.Drawing.Point(12, 13);
+            this.LabelAi.Name = "LabelAi";
+            this.LabelAi.Size = new System.Drawing.Size(510, 17);
+            this.LabelAi.TabIndex = 0;
+            this.LabelAi.Text = "Задана схема. Пусть Ai - событие при котором за время T выйдет из строя.";
             // 
             // label2
             // 
@@ -70,28 +71,30 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "\"При известных вероятностях P(Ai) найти вероятность следующих событий:";
             // 
-            // labelB
+            // LabelB
             // 
-            this.labelB.AutoSize = true;
-            this.labelB.Location = new System.Drawing.Point(49, 47);
-            this.labelB.Name = "labelB";
-            this.labelB.Size = new System.Drawing.Size(424, 17);
-            this.labelB.TabIndex = 2;
-            this.labelB.Text = "B - событие при котором схема не выйдет из строя за время T";
+            this.LabelB.AutoSize = true;
+            this.LabelB.Location = new System.Drawing.Point(49, 47);
+            this.LabelB.Name = "LabelB";
+            this.LabelB.Size = new System.Drawing.Size(424, 17);
+            this.LabelB.TabIndex = 2;
+            this.LabelB.Text = "B - событие при котором схема не выйдет из строя за время T";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(364, 68);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(255, 68);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(349, 178);
+            this.pictureBox1.Size = new System.Drawing.Size(458, 183);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(364, 266);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(255, 266);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(349, 101);
+            this.pictureBox2.Size = new System.Drawing.Size(458, 101);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
@@ -191,45 +194,47 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "P(A6) = q6 =";
             // 
-            // radioButton1
+            // RadioExFirst
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(19, 244);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(110, 21);
-            this.radioButton1.TabIndex = 17;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RadioExFirst.AutoSize = true;
+            this.RadioExFirst.Location = new System.Drawing.Point(19, 244);
+            this.RadioExFirst.Name = "RadioExFirst";
+            this.RadioExFirst.Size = new System.Drawing.Size(150, 21);
+            this.RadioExFirst.TabIndex = 17;
+            this.RadioExFirst.TabStop = true;
+            this.RadioExFirst.Text = "Решать задание 1";
+            this.RadioExFirst.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // RadioExSecond
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(19, 271);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(110, 21);
-            this.radioButton2.TabIndex = 18;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RadioExSecond.AutoSize = true;
+            this.RadioExSecond.Checked = true;
+            this.RadioExSecond.Location = new System.Drawing.Point(19, 271);
+            this.RadioExSecond.Name = "RadioExSecond";
+            this.RadioExSecond.Size = new System.Drawing.Size(150, 21);
+            this.RadioExSecond.TabIndex = 18;
+            this.RadioExSecond.TabStop = true;
+            this.RadioExSecond.Text = "Решать задание 2";
+            this.RadioExSecond.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BtnSolution
             // 
-            this.button1.Location = new System.Drawing.Point(19, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnSolution.Location = new System.Drawing.Point(18, 326);
+            this.BtnSolution.Name = "BtnSolution";
+            this.BtnSolution.Size = new System.Drawing.Size(191, 23);
+            this.BtnSolution.TabIndex = 19;
+            this.BtnSolution.Text = "Вычислить";
+            this.BtnSolution.UseVisualStyleBackColor = true;
+            this.BtnSolution.Click += new System.EventHandler(this.BtnSolution_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(725, 389);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.BtnSolution);
+            this.Controls.Add(this.RadioExSecond);
+            this.Controls.Add(this.RadioExFirst);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -244,9 +249,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.labelB);
+            this.Controls.Add(this.LabelB);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.labelAi);
+            this.Controls.Add(this.LabelAi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -259,9 +264,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelAi;
+        private System.Windows.Forms.Label LabelAi;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelB;
+        private System.Windows.Forms.Label LabelB;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
@@ -276,9 +281,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton RadioExFirst;
+        private System.Windows.Forms.RadioButton RadioExSecond;
+        private System.Windows.Forms.Button BtnSolution;
     }
 }
 
