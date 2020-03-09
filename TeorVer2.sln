@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeorVer2", "TeorVer2.csproj", "{230C1E0B-6E77-421E-9A6E-DC932BBC5079}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{230C1E0B-6E77-421E-9A6E-DC932BBC5079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{230C1E0B-6E77-421E-9A6E-DC932BBC5079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{230C1E0B-6E77-421E-9A6E-DC932BBC5079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{230C1E0B-6E77-421E-9A6E-DC932BBC5079}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C87B89A8-A7BD-4E1E-8D38-094E0FADB0F3}
+	EndGlobalSection
+EndGlobal
