@@ -32,8 +32,8 @@
             this.LabelAi = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.LabelB = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PicSys = new System.Windows.Forms.PictureBox();
+            this.PicFormule = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,8 +49,8 @@
             this.RadioExFirst = new System.Windows.Forms.RadioButton();
             this.RadioExSecond = new System.Windows.Forms.RadioButton();
             this.BtnSolution = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicSys)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicFormule)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelAi
@@ -80,23 +80,25 @@
             this.LabelB.TabIndex = 2;
             this.LabelB.Text = "B - событие при котором схема не выйдет из строя за время T";
             // 
-            // pictureBox1
+            // PicSys
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(255, 68);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(458, 183);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.PicSys.Image = ((System.Drawing.Image)(resources.GetObject("PicSys.Image")));
+            this.PicSys.Location = new System.Drawing.Point(255, 68);
+            this.PicSys.Name = "PicSys";
+            this.PicSys.Size = new System.Drawing.Size(458, 183);
+            this.PicSys.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicSys.TabIndex = 3;
+            this.PicSys.TabStop = false;
             // 
-            // pictureBox2
+            // PicFormule
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(255, 266);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(458, 101);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.PicFormule.Image = ((System.Drawing.Image)(resources.GetObject("PicFormule.Image")));
+            this.PicFormule.Location = new System.Drawing.Point(255, 266);
+            this.PicFormule.Name = "PicFormule";
+            this.PicFormule.Size = new System.Drawing.Size(458, 101);
+            this.PicFormule.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicFormule.TabIndex = 4;
+            this.PicFormule.TabStop = false;
             // 
             // label4
             // 
@@ -204,6 +206,7 @@
             this.RadioExFirst.TabStop = true;
             this.RadioExFirst.Text = "Решать задание 1";
             this.RadioExFirst.UseVisualStyleBackColor = true;
+            this.RadioExFirst.CheckedChanged += new System.EventHandler(this.RadioExFirst_CheckedChanged);
             // 
             // RadioExSecond
             // 
@@ -216,6 +219,7 @@
             this.RadioExSecond.TabStop = true;
             this.RadioExSecond.Text = "Решать задание 2";
             this.RadioExSecond.UseVisualStyleBackColor = true;
+            this.RadioExSecond.CheckedChanged += new System.EventHandler(this.RadioExSecond_CheckedChanged);
             // 
             // BtnSolution
             // 
@@ -247,16 +251,16 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PicFormule);
+            this.Controls.Add(this.PicSys);
             this.Controls.Add(this.LabelB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LabelAi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Text = "Задание 1 и Задание 2";
+            ((System.ComponentModel.ISupportInitialize)(this.PicSys)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicFormule)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,8 +271,8 @@
         private System.Windows.Forms.Label LabelAi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label LabelB;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox PicSys;
+        private System.Windows.Forms.PictureBox PicFormule;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;

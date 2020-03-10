@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TeorVer2
@@ -17,7 +11,8 @@ namespace TeorVer2
             InitializeComponent();
         }
 
-        private void BtnSolution_Click(object sender, EventArgs e){
+        private void BtnSolution_Click(object sender, EventArgs e)
+        {
             double[] P = new double[6];
             bool Error = false;
             //todo: сделать проверку данных
@@ -37,7 +32,8 @@ namespace TeorVer2
             }
 
             double Result = 0;
-            for(int i = 0; i < 6; i++) {
+            for (int i = 0; i < 6; i++)
+            {
                 if (P[i] < 0 || P[i] > 1)
                 {
                     Error = true;
@@ -45,14 +41,46 @@ namespace TeorVer2
                 }
             }
 
-            if (RadioExSecond.Checked && !Error){
+            if (RadioExSecond.Checked && !Error)
+            {
                 Result = verSummSovmSob(P[0], (verSummSovmSob(P[1], P[2]) * P[3] * verSummSovmSob(P[4], P[5])));
+                MessageBox.Show("Результат вычислений " + Result);
+            }
+            if(RadioExFirst.Checked && !Error)
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    double temp = 1 - P[i];
+                    P[i] = temp;
+                }
+                Result = P[0] * verSummSovmSob(P[1], P[3] * P[4] * P[5]) * P[2];
                 MessageBox.Show("Результат вычислений " + Result);
             }
         }
 
-        double verSummSovmSob(double a, double b){
+        double verSummSovmSob(double a, double b)
+        {
             return a + b - a * b;
+        }
+
+        private void RadioExFirst_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RadioExFirst.Checked)
+            {
+                PicSys.Image = new Bitmap("Ex1.png");
+                PicFormule.Image = new Bitmap("Ex1F.png");
+                LabelAi.Text = "Задана схема. Пусть Ai - событие при котором за время T не выйдет из строя.";
+            }
+        }
+
+        private void RadioExSecond_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RadioExSecond.Checked)
+            {
+                PicSys.Image = new Bitmap("Ex2(1).png");
+                PicFormule.Image = new Bitmap("Ex2F.png");
+                LabelAi.Text = "Задана схема. Пусть Ai - событие при котором за время T выйдет из строя.";
+            }
         }
     }
 }
